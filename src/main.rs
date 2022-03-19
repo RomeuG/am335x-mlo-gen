@@ -23,12 +23,15 @@ pub enum Error {
 #[derive(Debug, Parser)]
 #[clap(author, version, about, long_about = None)]
 struct Args {
+    /// Input file
     #[clap(short, long)]
     input: String,
 
+    /// Load address
     #[clap(short, long, default_value_t = 0x402F0400)]
     address: i32,
 
+    /// Output file
     #[clap(short, long, default_value = "MLO")]
     output: String,
 }
